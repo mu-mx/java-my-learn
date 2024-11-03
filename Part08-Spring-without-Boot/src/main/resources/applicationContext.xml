@@ -1,0 +1,10 @@
+<beans>
+    <bean id="helloWorld" class="com.example.HelloWorld">
+        <property name="message" value="Hello World!"/>
+    </bean>
+
+    <bean id="helloWorld2" class="com.example.HelloWorld">
+        <property name="message" value="Hello World 2!"/>
+    </bean>
+</beans>
+

@@ -1,4 +1,3 @@
-
 # 安装maven
 
  ```js
@@ -51,11 +50,21 @@
 
 ```
 
+# 安装 tomcat
+
+```js
+// 下载zip
+// 解压之后
+// 配置环境变量
+CATALINA_HOME
+// path
+%MAVEN_HOME%\bin;
 
 
-
+```
 
 # 安装IDEA配置maven
+
 ```js
 
 ```
