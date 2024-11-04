@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.xwcom.mybatis.mapper.UserMapper">
+
+    <!--
+        mapper接口和映射文件要保证两个一致：
+        1、mapper接口的全类名和映射文件的namespace一致
+        2、mapper接口中的方法的方法名要和映射文件中的sql的id保持一致
+    -->
+
+    <insert id="insertUser" parameterType="com.xwcom.mybatis.pojo.User">
+        insert into t_user (username, password, email, gender, age)
+        values (#{username}, #{password}, #{email}, #{gender}, #{age})
+    </insert>
+
+    <delete id="deleteUserById" parameterType="int">
+        delete
+        from t_user
+        where id = #{id}
+    </delete>
+
+    <update id="updateUser" parameterType="com.xwcom.mybatis.pojo.User">
+        update t_user
+        set name = #{name},
+            pwd  = #{pwd}
+        where id = #{id}
+    </update>
+
+    <select id="selectUserById" parameterType="int" resultType="com.xwcom.mybatis.pojo.User">
+        select *
+        from t_user
+        where id = #{id}
+    </select>
+
+
+</mapper>
