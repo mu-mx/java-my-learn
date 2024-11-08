@@ -5,6 +5,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableLogic;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.io.Serializable;
 import java.util.Date;
@@ -28,5 +29,6 @@ public class BaseEntity implements Serializable {
     @Schema(description = "逻辑删除")
     @TableField("is_deleted")
     @TableLogic
+    @JsonIgnore
     private Byte isDeleted;
 }
