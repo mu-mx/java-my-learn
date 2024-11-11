@@ -1,13 +1,15 @@
 #minio  ioadmin
 #minio  ioadmin123
 
+#baota  dgi4kgjf f6a06b44
+
 
 server:
   port: 8080
 spring:
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:mysql://192.168.101.26:3306/lease?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT%2b8
+    url: jdbc:mysql://192.168.101.27:3306/lease?useUnicode=true&characterEncoding=utf-8&useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=GMT%2b8
     username: root
     password: root
     hikari:
@@ -34,3 +36,9 @@ mybatis-plus:
       logic-delete-field: flag
       logic-delete-value: 1
       logic-not-delete-value: 0
+
+minio:
+  endpoint: http://192.168.101.27:9000
+  access-key: 4XGa9BjPjKDHbGKaL82w
+  secret-key: wX2y9lQ5veFBFyjnn72vr9ontljK3QbOvw3TkgKx
+  bucket-name: io1
